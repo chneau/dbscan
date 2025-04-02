@@ -1,10 +1,3 @@
-# dbscan
-
-DBSCAN clustering algorithm implementation written in Go using generics.
-
-## Example
-
-```go
 package main
 
 import (
@@ -75,10 +68,10 @@ func ExampleCoordinates() {
 	}
 
 	// Output: (Unordered)
-	// Cluster 0: Observations = [[1 2] [2 3] [3 4]]
-	// Cluster 1: Observations = [[11 12] [12 13] [13 14]]
-	// Cluster 2: Observations = [[21 22] [22 23] [23 24]]
-	// Cluster 3: Observations = [[100 200]]
+	// Cluster 0: Observations = [{1 2} {2 3} {3 4}]
+	// Cluster 1: Observations = [{11 12} {12 13} {13 14}]
+	// Cluster 2: Observations = [{21 22} {22 23} {23 24}]
+	// Cluster 3: Observations = [{100 200}]
 	for i, cluster := range clusters {
 		fmt.Printf("Cluster %d: Observations = %v\n", i, cluster)
 	}
@@ -88,4 +81,3 @@ func main() {
 	ExampleNumbers()
 	ExampleCoordinates()
 }
-```
